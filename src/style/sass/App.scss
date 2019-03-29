@@ -1,0 +1,22 @@
+.error> {
+  span{
+    color:red;
+  }
+  input{
+    border-bottom: 1px solid red !important;//#9e9e9e;
+  }
+}
+.fixed-action-btn{
+  top:10px;
+}
+
+.form-buttons{
+  margin-top: 20px;
+  float: right;
+  >:first-child{
+    margin-right: 10px;
+  }
+}
+.material-icons{
+  cursor: pointer;
+}

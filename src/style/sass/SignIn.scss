@@ -1,0 +1,46 @@
+.round-button {
+  padding: 10px 30px 11px 30px;
+  font-size: 30px;
+  border-radius: 100px;
+  text-align: center;
+  text-decoration: none;
+  background: #dc453a;
+  color: white;
+  transition: opacity 0.5s;
+}
+
+.social-signin-container {
+  margin-top: 15%;
+}
+
+.round-button:hover {
+  opacity: 0.9;
+}
+
+#sign-in {
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+#sign-in-header {
+  margin-bottom: 40px;
+}
+button {
+  cursor: pointer;
+  padding: 12px;
+  background: #999;
+  //font-family: 'Roboto Slab', sans-serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid #797979;
+
+  &:hover {
+    background-color:  #Ec453a;
+  }
+
+  //&:active {
+  //  background-color: #888;
+  //}
+}

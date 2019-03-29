@@ -1,0 +1,136 @@
+.to-do-list-container {
+  margin-top: 50px;
+}
+
+.to-do-list-item {
+  margin-top: 10px;
+  color: white;
+  transition: background-color 1s;
+  h4 {
+    padding-left: 25px;
+    padding-bottom: 5px;
+  }
+  &:hover {
+    background-color: #26a69a !important;
+  }
+}
+
+.complete-todo-item {
+  float: right;
+  right: 20px;
+}
+
+#todo-add-form {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+#nothing-was-found {
+  margin-top: 150px;
+}
+
+#sign-out-button {
+  margin-right: 15px;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 1;
+  }
+}
+
+
+/* generic */
+
+
+
+.list {
+  width: 100%;
+  ul {
+
+    text-align: center;
+    &:nth-child(odd) {
+      background-color: #ddd;
+    }
+    &:nth-child(even) {
+      background-color: #fff;
+    }
+  }
+}
+
+/* big */
+@media screen and (min-width: 600px) {
+  .list {
+    display: table;
+
+    margin: 1em;
+    ul {
+      display: table-row;
+      &:first-child li {
+        background-color: #444;
+        color: #fff;
+      }
+      > li {
+        display: table-cell;
+        padding: .5em 1em;
+      }
+    }
+  }
+}
+
+/* small */
+@media screen and (max-width: 599px) {
+  .list {
+
+    ul {
+      text-align: left;
+      border: solid 1px #ccc;
+      display: block;
+      list-style: none;
+      margin: 1em;
+      padding: .5em 1em;
+      &:first-child {
+        display: none;
+      }
+      > li {
+        display: block;
+        padding: .25em 0;
+      }
+      &:nth-child(odd) > li + li {
+        border-top: solid 1px #ccc;
+      }
+      &:nth-child(even) > li + li {
+        border-top: solid 1px #eee;
+      }
+      > li:before {
+        color: #000;
+        content: attr(data-label);
+        display: inline-block;
+        font-size: 75%;
+        font-weight: bold;
+        text-transform: capitalize;
+        vertical-align: top;
+        width: 50%;
+      }
+    }
+    p {
+      margin: -1em 0 0 50%;
+    }
+  }
+}
+
+/* tiny */
+@media screen and (max-width: 349px) {
+  .list {
+    ul > li:before {
+      display: block;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
